@@ -20,13 +20,21 @@ export const Add = () => {
     }
     const handleMovieList = ()=>{
         for(let i =0; i< templist.length; i++){
-            addMovieToWatchlist(templist[i])
+        let isPresentMovie = watchlist.find(object => object.imdbID === templist[i].imdbID)
+        if(isPresentMovie){
+          continue;
+        }
+        addMovieToWatchlist(templist[i])
         }
         
     }
     const handleWatchedList =()=>{
         for(let i =0; i< templist.length; i++){
-            addMovieToWatched(templist[i])
+        let isPresentMovie = watched.find(object => object.imdbID === templist[i].imdbID)
+        if(isPresentMovie){
+          continue;
+        }
+        addMovieToWatched(templist[i])
         }
 
     }
@@ -52,7 +60,8 @@ export const Add = () => {
     return (
         <div>
 
-        
+         
+  <h1 className="flex-container pt-4">Movie Engine</h1>
   <div className="flex-container pt-4 pb-4">
     <input
                 type="text"
@@ -88,8 +97,8 @@ export const Add = () => {
     <option value="2019">2019</option>
     <option value="2020">2020</option>
   </select>
-  </div> 
-  <button className="btn btn-primary ml-3" onClick={onSubmit}>search</button>
+  </div>
+  <button  className="ml-2  btn btn-info btn-md ml-3" onClick={onSubmit}>search</button>
 
             </div>
             

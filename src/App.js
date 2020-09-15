@@ -22,7 +22,6 @@ function App() {
     <Route exact path="/watched">
     <Watched />
     </Route>
-
     </Switch>
     </Router>
     </GlobalProvider>
