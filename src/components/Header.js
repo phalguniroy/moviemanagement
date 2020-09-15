@@ -11,7 +11,7 @@ export const Header = () => {
         <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link" to="/watch List">Watch List</Link>
+        <Link className="nav-link" to="/watchlist">Watch List</Link>
         </li>
         <li className="nav-item">
         <Link className="nav-link" to="/watched">Watched</Link>

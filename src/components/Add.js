@@ -109,7 +109,7 @@ export const Add = () => {
   {errors.length > 0 && (
       <h3 className="flex-container">{errors}</h3>
   )}
-  {templist.length>0 && <div className="flex-container mb-3">
+  {templist.length>0 && results.length > 0 && <div className="flex-container mb-3">
   <button className="btn btn-primary btn-lg " onClick={handleMovieList}>Add to Movie List</button>
   <button className="ml-2  btn btn-warning btn-lg " onClick={handleWatchedList}>Add to Watched List</button>
   </div>}

@@ -1,12 +1,13 @@
-import React, {useContext, GlobalContext} from 'react'
+import React, { useContext} from 'react'
+import {GlobalContext} from '../context/GlobalState'
 import { SearchCard } from "./SearchCard";
 
 export const Watchlist = () => {
-    const { addMovieToWatchlist, watchlist, templist, addTemplist, addMovieToWatched, watched} = useContext(GlobalContext)
+    const { watchlist} = useContext(GlobalContext)
     console.log(watchlist)
     return (<div>
-            <h1>watch list page</h1>
-            {watchlist.length > 0  && (
+            <h5 className="flex-container m-3">Movie wishlist</h5>
+            { (
                 <div className="flex-photo">
                 
                   {watchlist.map((movie) => (
