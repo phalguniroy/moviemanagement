@@ -7,15 +7,11 @@ export const Watchlist = () => {
     console.log(watchlist)
     const handleWatchedList =()=>{
         for(let i =0; i< templist.length; i++){
-        let isPresentMovie = watched.find(object => object.imdbID === templist[i].imdbID)
-        if(isPresentMovie)
-          continue;
         addMovieToWatched(templist[i])
         }
 
     }
     const handleRemoveWishList =()=>{
-     let list = watchlist.filter(f=>!templist.includes(f))
     }
     return (<div>
             <h5 className="flex-container m-3">Movie wishlist</h5>

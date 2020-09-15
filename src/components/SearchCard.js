@@ -6,6 +6,7 @@ export const SearchCard = ({ movie }) => {
     const { addMovieToWatchlist, watchlist, addTemplist, watched} = useContext(GlobalContext)
 
     let savedMovie = watchlist.find(object => object.imdbID === movie.imdbID)
+    const showButton = savedMovie ? true : false;
     const text = savedMovie ? `added to wishlist` : `Add to wishlist`;
     const watchedMovie = watched.find(object => object.imdbID === movie.imdbID)
     const watchStatus = watchedMovie ? `watched` : `not watched`;

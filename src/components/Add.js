@@ -20,20 +20,12 @@ export const Add = () => {
     }
     const handleMovieList = ()=>{
         for(let i =0; i< templist.length; i++){
-        let isPresentMovie = watchlist.find(object => object.imdbID === templist[i].imdbID)
-        if(isPresentMovie){
-          continue;
-        }
         addMovieToWatchlist(templist[i])
         }
         
     }
     const handleWatchedList =()=>{
         for(let i =0; i< templist.length; i++){
-        let isPresentMovie = watched.find(object => object.imdbID === templist[i].imdbID)
-        if(isPresentMovie){
-          continue;
-        }
         addMovieToWatched(templist[i])
         }
 
